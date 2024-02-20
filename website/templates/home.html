@@ -28,7 +28,7 @@
 
         {% if records %}
         {% for record in records %}
-          <tr>
+          <tr style="cursor: pointer;" onclick="window.location='{% url 'record' record.id %}'">
             <td>{{ record.first_name }} {{ record.last_name }} </td>
             <td>{{ record.email }} </td>
             <td>{{ record.phone }} </td>
